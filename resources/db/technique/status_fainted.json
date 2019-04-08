@@ -1,0 +1,13 @@
+{
+  "animation": "",
+  "sfx": "faint.ogg",
+  "icon": "",
+  "category": "faint",
+  "effects": [],
+  "id": 7,
+  "name": "Faint",
+  "power": 10,
+  "types": [
+    "Faint"
+  ]
+}
