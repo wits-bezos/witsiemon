@@ -10,10 +10,12 @@ import witsiemon.controller.PlayerController;
 import witsiemon.model.Actor;
 import witsiemon.model.TERRAIN;
 import witsiemon.model.TileMap;
+import witsiemon.model.Camera;
 
 public class GameScreen extends AbstractScreen {
 	
 	private PlayerController controller;
+	private Camera camera;
 	private Actor player;
 	private SpriteBatch batch;
 	private Texture standingSouth;
@@ -31,6 +33,7 @@ public class GameScreen extends AbstractScreen {
 		batch = new SpriteBatch();
 		map = new TileMap(10, 10);
 		player = new Actor(map,0, 0);
+		camera = new Camera();
 		controller = new PlayerController(player);
 	}
 
@@ -54,8 +57,13 @@ public class GameScreen extends AbstractScreen {
 
 	@Override
 	public void render(float delta) {
+		player.update(delta);
+		camera.update(player.getWorldX()+0.5f, player.getWorldY()+0.5f);
+		
 		batch.begin();
 		
+		float worldStarX = Gdx.graphics.getWidth()/2 - camera.getCameraX()*Settings.SCALED_TILE_SIZE;
+		float worldStarY = Gdx.graphics.getHeight()/2 - camera.getCameraY()*Settings.SCALED_TILE_SIZE;
 		for(int x = 0; x < map.getWidth();x++) {
 			for(int y = 0; y < map.getHeight(); y++) {
 				Texture render;
@@ -64,11 +72,11 @@ public class GameScreen extends AbstractScreen {
 				}else {
 					render = grass2;
 				}
-				batch.draw(render,x*Settings.SCALED_TILE_SIZE, y*Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE);
+				batch.draw(render,worldStarX+x*Settings.SCALED_TILE_SIZE, worldStarY+y*Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE);
 			}
 		}
 		
-		batch.draw(standingSouth, player.getX()*Settings.SCALED_TILE_SIZE, player.getY()*Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE*1.5f);
+		batch.draw(standingSouth, worldStarX+player.getWorldX()*Settings.SCALED_TILE_SIZE, worldStarY+player.getWorldY()*Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE, Settings.SCALED_TILE_SIZE*1.5f);
 		batch.end();
 	}
 
