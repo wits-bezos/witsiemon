@@ -1,29 +1,40 @@
 package witsiemon.model;
 
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Interpolation;
+
+import witsiemon.util.AnimationSet;
 
 public class Actor {
 	
 	private TileMap map;
 	private int x;
 	private int y;
+	private DIRECTION facing;
 	
 	private float worldX, worldY;
 	private int srcX, srcY;
 	private int destX, destY;
 	private float animTimer;
-	private float ANIM_TIME = 0.5f;
+	private float ANIM_TIME = 0.3f;
+	
+	private float walkTimer;
+	private boolean moveRequestThisFrame;
 	
 	private ACTOR_STATE state;
 	
-	public Actor(TileMap map, int x, int y) {
+	private AnimationSet animations;
+	
+	public Actor(TileMap map, int x, int y, AnimationSet animations) {
 		this.map = map;
 		this.x = x;
 		this.y = y;
 		this.worldX = x;
 		this.worldY = y;
+		this.animations = animations;
 		map.getTile(x, y).setActor(this);
 		this.state = ACTOR_STATE.STANDING;
+		this.facing = DIRECTION.SOUTH;
 	}
 	
 	public enum ACTOR_STATE {
@@ -35,39 +46,52 @@ public class Actor {
 	public void update(float delta) {
 		if(state == ACTOR_STATE.WALKING) {
 			animTimer += delta;
+			walkTimer += delta;
 			worldX = Interpolation.linear.apply(srcX, destX, animTimer/ANIM_TIME);
 			worldY = Interpolation.linear.apply(srcY, destY, animTimer/ANIM_TIME);
 			if(animTimer > ANIM_TIME) {
+				float leftOverTime = animTimer-ANIM_TIME;
+				walkTimer -= leftOverTime;
 				finishMove();
+				if(moveRequestThisFrame) {
+					move(facing);
+				}else {
+					walkTimer = 0f;
+				}
 			}
 		}
+		moveRequestThisFrame = false;
 	}
 
-	public boolean move(int dx, int dy) {
-		if(state != ACTOR_STATE.STANDING) {
+	public boolean move(DIRECTION dir) {
+		if(state == ACTOR_STATE.WALKING) {
+			if(facing == dir) {
+				moveRequestThisFrame = true;
+			}
 			return false;
 		}
-		if(x+dx >= map.getWidth() || x+dx < 0 || y+dy >= map.getHeight() || y+dy < 0) {
+		if(x+dir.getDx() >= map.getWidth() || x+dir.getDx() < 0 || y+dir.getDy() >= map.getHeight() || y+dir.getDy() < 0) {
+			return false;	
+		}
+		if(map.getTile(x+dir.getDx(), y+dir.getDy()).getActor() != null) {
 			return false;
 		}
-		if(map.getTile(x+dx, y+dy).getActor() != null) {
-			return false;
-		}
-		initializeMove(x, y, dx, dy);
+		initializeMove(dir);
 		map.getTile(x, y).setActor(null);
-		x += dx;
-		y += dy;
+		x += dir.getDx();
+		y += dir.getDy();
 		map.getTile(x, y).setActor(this);
 		return true;
 	}
 	
-	private void initializeMove(int oldX, int oldY, int dx, int dy) {
-		this.srcX = oldX;
-		this.srcY = oldY;
-		this.destX = oldX+dx;
-		this.destY = oldY+dy;
-		this.worldX = oldX;
-		this.worldY = oldY;
+	private void initializeMove(DIRECTION dir) {
+		this.facing = dir;
+		this.srcX = x;
+		this.srcY = y;
+		this.destX = x+dir.getDx();
+		this.destY = y+dir.getDy();
+		this.worldX = x;
+		this.worldY = y;
 		animTimer = 0f;
 		state = ACTOR_STATE.WALKING;
 	}
@@ -78,6 +102,15 @@ public class Actor {
 
 	public float getWorldY() {
 		return worldY;
+	}
+	
+	public TextureRegion getSprite() {
+		if(state == ACTOR_STATE.WALKING) {
+			return animations.getWalking(facing).getKeyFrame(walkTimer);
+		} else if(state == ACTOR_STATE.STANDING) {
+			return animations.getStanding(facing);
+		}
+		return animations.getStanding(DIRECTION.SOUTH);
 	}
 	
 	private void finishMove() {
