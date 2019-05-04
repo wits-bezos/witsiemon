@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/1599695/witsiemon.svg?branch=master)](https://travis-ci.org/1599695/witsiemon)
 
 Witsiemon is an RPG monster capturing game based on the Wits University campus map.
+![Untitled](https://user-images.githubusercontent.com/49201643/57180924-d6851200-6e8d-11e9-9c1b-062dc8a7309e.png)
 
 # Installiation
 
