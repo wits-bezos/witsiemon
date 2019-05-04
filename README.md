@@ -18,6 +18,7 @@ The game was developed using Java 10, however it may ran on lower versions.
 
 # Usage
 On runing the game for the first time, you will be requested to create an account. All game data related to your game play, will be saved on your account. So feel free to log in and out anytime during game play.
+As the player you main objective is to maximize your points. Travel through the map and look for creatures, but becarful, some are not as nice as they look.
 
 # Controls
 
