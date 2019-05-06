@@ -1,5 +1,5 @@
 # witsiemon
-[![Build Status](https://travis-ci.org/1599695/witsiemon.svg?branch=libGdx)](https://travis-ci.org/1599695/witsiemon)
+[![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=libGdx)](https://travis-ci.org/wits-bezos/witsiemon)
 
 [![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=master)](https://coveralls.io/github/wits-bezos/witsiemon?branch=master)
 
