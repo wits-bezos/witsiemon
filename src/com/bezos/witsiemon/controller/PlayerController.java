@@ -2,13 +2,13 @@ package com.bezos.witsiemon.controller;
 
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
-import com.bezos.witsiemon.model.Player;
+import com.bezos.witsiemon.model.Actor;
 
 public class PlayerController extends InputAdapter {
 	
-	private Player player;
+	private Actor player;
 	
-	public PlayerController(Player player) {
+	public PlayerController(Actor player) {
 		this.player = player;
 	}
 
