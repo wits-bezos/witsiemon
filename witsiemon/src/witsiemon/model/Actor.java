@@ -54,7 +54,11 @@ public class Actor {
 				walkTimer -= leftOverTime;
 				finishMove();
 				if(moveRequestThisFrame) {
-					move(facing);
+					if (move(facing)) {
+						animTimer += leftOverTime;
+						worldX = Interpolation.linear.apply(srcX, destX, animTimer / ANIM_TIME);
+						worldY = Interpolation.linear.apply(srcY, destY, animTimer / ANIM_TIME);
+					}
 				}else {
 					walkTimer = 0f;
 				}
