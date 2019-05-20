@@ -6,12 +6,7 @@ import java.util.List;
 
 import battle.animation.ChargeAnimation;
 
-/**
- * Collection of all moves known by the game. Only create one of these, preferably at a high level.
- * Note that this class returns clones of Moves. The returned moves are therefore safe to use.
- * 
- * @author hydrozoa
- */
+
 public class MoveDatabase {
 	
 	private List<Move> moves = new ArrayList<Move>();

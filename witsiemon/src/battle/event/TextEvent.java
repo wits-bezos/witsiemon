@@ -4,11 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import ui.DialogueBox;
 
-/**
- * A BattleEvent where text is displayed in the BattleScreen's DialogueBox.
- * 
- * @author hydrozoa
- */
+
 public class TextEvent extends BattleEvent {
 	
 	private boolean finished = false;

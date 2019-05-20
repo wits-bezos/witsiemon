@@ -3,9 +3,6 @@ package battle.animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
-/**
- * @author hydrozoa
- */
 public class BattleSprite {
 	
 	/**

@@ -5,9 +5,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 
-/**
- * @author hydrozoa
- */
+
 public class BlinkingAnimation extends BattleAnimation {
 	
 	private int blinks;

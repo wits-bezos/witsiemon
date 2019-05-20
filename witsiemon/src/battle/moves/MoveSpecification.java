@@ -1,8 +1,5 @@
 package battle.moves;
 
-/**
- * @author hydrozoa
- */
 public class MoveSpecification {
 	
 	private MOVE_TYPE type;

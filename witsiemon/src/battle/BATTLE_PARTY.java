@@ -1,8 +1,5 @@
 package battle;
 
-/**
- * @author hydrozoa
- */
 public enum BATTLE_PARTY {
 	PLAYER,
 	OPPONENT,

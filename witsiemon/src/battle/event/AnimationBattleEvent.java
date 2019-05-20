@@ -3,11 +3,7 @@ package battle.event;
 import battle.BATTLE_PARTY;
 import battle.animation.BattleAnimation;
 
-/**
- * A BattleEvent where a BattleAnimation is played.
- * 
- * @author hydrozoa
- */
+
 public class AnimationBattleEvent extends BattleEvent {
 	
 	private BATTLE_PARTY primary;

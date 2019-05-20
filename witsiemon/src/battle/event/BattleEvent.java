@@ -1,10 +1,6 @@
 package battle.event;
 
-/**
- * Any visual change in a Battle. These are queued up and displayed chonologically on the BattleScreen.
- * 
- * @author hydrozoa
- */
+
 public abstract class BattleEvent {
 	
 	private BattleEventPlayer player;

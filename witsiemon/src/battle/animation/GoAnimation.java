@@ -5,9 +5,6 @@ import com.badlogic.gdx.assets.AssetManager;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 
-/**
- * @author hydrozoa
- */
 public class GoAnimation extends BattleAnimation {
 
 	public GoAnimation() {

@@ -7,9 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 
-/**
- * @author hydrozoa
- */
+
 public class ChargeAnimation extends BattleAnimation {
 	
 	private BattleSprite hitmark;

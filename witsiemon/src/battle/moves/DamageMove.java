@@ -14,11 +14,7 @@ import battle.event.HPAnimationEvent;
 import battle.event.TextEvent;
 import witsiemon.model.Pokemon;
 
-/**
- * We're going to do some real important shit around here Morty.
- * 
- * @author hydrozoa
- */
+
 public class DamageMove extends Move {
 
 	public DamageMove(MoveSpecification spec, Class<? extends BattleAnimation> clazz) {

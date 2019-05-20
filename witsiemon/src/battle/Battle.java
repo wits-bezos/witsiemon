@@ -15,11 +15,7 @@ import battle.event.PokeSpriteEvent;
 import battle.event.TextEvent;
 import battle.moves.Move;
 import witsiemon.model.Pokemon;
-/**
- * A 100% real Pokemon fight! Right in your livingroom.
- * 
- * @author hydrozoa
- */
+
 public class Battle implements BattleEventQueuer {
 	
 	public enum STATE {

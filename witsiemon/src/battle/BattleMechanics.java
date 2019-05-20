@@ -3,15 +3,9 @@ package battle;
 import com.badlogic.gdx.math.MathUtils;
 import battle.moves.MOVE_CATEGORY;
 import battle.moves.Move;
-import model.Pokemon;
+import witsiemon.model.Pokemon;
 
-/**
- * Contains methods useful for calculations during battle. 
- * 
- * Some say this is a ShoddyBattle tactic, and they're probably right.
- * 
- * @author hydrozoa
- */
+
 public class BattleMechanics {
 	
 	private String message = "";

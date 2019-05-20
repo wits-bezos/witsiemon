@@ -12,9 +12,7 @@ import aurelienribon.tweenengine.TweenManager;
 import aurelienribon.tweenengine.equations.Linear;
 import aurelienribon.tweenengine.equations.Sine;
 
-/**
- * @author hydrozoa
- */
+
 public class PokeballAnimation extends BattleAnimation {
 	
 	/* Delay from start till the pokeball opens */

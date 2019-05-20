@@ -3,12 +3,7 @@ package battle.event;
 import com.badlogic.gdx.graphics.Texture;
 import battle.BATTLE_PARTY;
 
-/**
- * A BattleEvent where a Pokemon's sprite is changed.
- * This event takes no time.
- * 
- * @author hydrozoa
- */
+
 public class PokeSpriteEvent extends BattleEvent {
 	
 	private Texture region;

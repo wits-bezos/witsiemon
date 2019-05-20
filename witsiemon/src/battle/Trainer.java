@@ -3,11 +3,9 @@ package battle;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hydrozoa.pokemon.model.Pokemon;
+import witsiemon.model.Pokemon;
 
-/**
- * @author hydrozoa
- */
+
 public class Trainer {
 	
 	private List<Pokemon> team;

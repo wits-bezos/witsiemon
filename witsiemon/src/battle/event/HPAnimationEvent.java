@@ -7,11 +7,7 @@ import ui.HPBar;
 import ui.StatusBox;
 
 
-/**
- * A BattleEvent where HP can be seen, depleting.
- * 
- * @author hydrozoa
- */
+
 public class HPAnimationEvent extends BattleEvent {
 	
 	private BATTLE_PARTY party;

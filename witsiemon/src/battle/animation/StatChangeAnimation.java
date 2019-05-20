@@ -9,9 +9,7 @@ import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 import aurelienribon.tweenengine.equations.Linear;
 
-/**
- * @author hydrozoa
- */
+
 public class StatChangeAnimation extends BattleAnimation {
 	
 	private TextureAnimation animation;

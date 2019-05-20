@@ -7,14 +7,7 @@ import battle.animation.BattleAnimation;
 import battle.event.BattleEventQueuer;
 import witsiemon.model.Pokemon;
 
-/**
- * Represents a move a pokemon can do in battle. 
- * 
- * Do not make new instances of these! 
- * Instead, use {@link #clone()}.
- * 
- * @author hydrozoa
- */
+
 public abstract class Move {
 	
 	protected MoveSpecification spec;

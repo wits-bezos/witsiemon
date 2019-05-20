@@ -1,10 +1,6 @@
 package battle;
 
-/**
- * Elements that determine certain aspects on battles.
- * 
- * @author hydrozoa
- */
+
 public enum STAT {
 	
 	/** Determines show much damage a Pokemon can recieve before fainting */
