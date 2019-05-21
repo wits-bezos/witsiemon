@@ -6,23 +6,39 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
+import witsiemon.model.Pokemon;
 import witsiemon.screen.GameScreen;
+import witsiemon.screen.battleScreen;
 
 public class Witsiemon extends Game {
 	
 	private GameScreen screen;
 	private AssetManager assetManager;
+	private battleScreen battleScreen;
+	private Pokemon user;
+	private Pokemon enemy;
+	boolean battle;
 	
+	Witsiemon(boolean battle){
+		this.battle = battle;
+	}
 	@Override
 	public void create() {
 		assetManager = new AssetManager();
 		assetManager.load("res/packed/textures.atlas", TextureAtlas.class);
 		assetManager.finishLoading();
 		
-		
+		user = new Pokemon("charizard",100,20,30,6);
+		enemy = new Pokemon("ekans",100,15,2,1);
+		battleScreen = new battleScreen(this, enemy, user);
 		screen = new GameScreen(this);
-		
-		this.setScreen(screen);
+		if(battle) {
+			this.setScreen(battleScreen);
+	
+		}
+		else {
+			this.setScreen(screen);
+		}
 	}
 	
 	@Override

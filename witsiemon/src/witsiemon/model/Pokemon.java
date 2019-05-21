@@ -3,80 +3,52 @@ package witsiemon.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import battle.moves.Move;
-import battle.STAT;
+import com.badlogic.gdx.graphics.Texture;
+
 
 public class Pokemon {
-
 	
-	private String name="";
-	private int level = 0;
-	private boolean consciousness = true;
+	private String name;
 	
-	Map<STAT,Integer> stats;
-	int currHP=100;
+	private int level, HP, ATT, SP_ATT, SPEED;
+	Texture appearance;
 	
-	Move[] moves = new Move[4];
-	
-	public Pokemon(String name, int level) {
+	public Pokemon(String name, int HP, int ATT, int SP_ATT, int SPEED){
 		this.name = name;
-		this.level = level;
-		
-		stats= new HashMap<STAT, Integer>();
-		
-		//Sets all stats to 15
-		
-		for (STAT stat : STAT.values()) {
-			stats.put(stat, 15);
-		}
-		
-		//Sets HP to full(100)
-		stats.put(STAT.HITPOINTS, 100);
-		
+		this.HP = HP;
+		this.ATT = ATT;
+		this.SP_ATT = SP_ATT;
+		this.SPEED = SPEED;
+		this.appearance = new Texture("res/" + name + ".png");
 	}
 	
-	public int getLevel() {
-		return this.level;
+	public Texture getSprite() {
+		return appearance;
 	}
+	public void setDMG(int dmg) {
+		this.HP = HP - dmg;
+	}
+	public void setHP(int add) {
+		HP = add;
+	}
+	public int getHP() {
+		return this.HP;
+	}
+	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
-	void setHP(int HP) {
-		this.currHP = HP;
+	public int getDMG() {
+		return ATT;
+	}
+	public int getSP() {
+		return SP_ATT;
+	}
+	public int getSpeed() {
+		return SPEED;
 	}
 	
-	int getHP() {
-		return this.currHP;
-	}
 	
-	public boolean canFight() {
-		return consciousness;
-	}
-	
-	//Assume pos is valid ( < 4 )
-	
-	void newMove(Move move, int pos) {
-		moves[pos] = move;
-	}
-	
-	//Assume pos is valid ( < 4 )
-	Move getMove(int pos) {
-		return moves[pos];
-	}
-	
-	int statValue(STAT s) {
-		return stats.get(s);
-	}
-
-	public int getStat(STAT speedValue) {
-		// TODO Auto-generated method stub
-		return stats.get(speedValue);
-	}
-
-	public int getCurrentHitpoints() {
-		// TODO Auto-generated method stub
-		return this.currHP;
-	}
 	
 }
