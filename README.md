@@ -3,6 +3,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=master)](https://coveralls.io/github/wits-bezos/witsiemon?branch=java-maven-integration)
 
+[![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/java-maven-integration/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
+
 
 Witsiemon is an RPG monster capturing game based on the Wits University campus map.
 ![Untitled](https://user-images.githubusercontent.com/49201643/57180924-d6851200-6e8d-11e9-9c1b-062dc8a7309e.png)
