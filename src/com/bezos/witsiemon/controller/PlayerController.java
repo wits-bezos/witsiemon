@@ -1,8 +1,8 @@
 package com.bezos.witsiemon.controller;
 
 import com.badlogic.gdx.Input.Keys;
+import com.bezos.witsiemon.actors.Actor;
 import com.badlogic.gdx.InputAdapter;
-import com.bezos.witsiemon.model.Actor;
 
 public class PlayerController extends InputAdapter {
 	

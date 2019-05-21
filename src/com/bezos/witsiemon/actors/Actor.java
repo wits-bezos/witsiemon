@@ -1,12 +1,12 @@
-package com.bezos.witsiemon.model;
+package com.bezos.witsiemon.actors;
 
 public class Actor {
 	
-	private TileMap map;
+	private Map map;
 	private int x;
 	private int y;
 	
-	public Actor(TileMap map, int x, int y) {
+	public Actor(Map map, int x, int y) {
 		this.map = map;
 		this.x = x;
 		this.y = y;
