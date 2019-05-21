@@ -2,47 +2,53 @@ package com.bezos.witsiemon.actors;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 
 public class Map {
-	private int width, height;
-	private Tile[][] map;
-
-	public Map(String filename, String terrain) {
+	private int width;
+	private int height;
+	private int size;
+	private Layer[] map;
+	private PROPERTIES[] properties;
+	
+	public Map(String filename) {
 		TmxMapLoader loader = new TmxMapLoader();
-		TiledMap tileMap = loader.load(filename);
-		TiledMapTileLayer layer = (TiledMapTileLayer) tileMap.getLayers().get(terrain);
+		TiledMap tilemap = loader.load(filename);
 		
-		int width = layer.getWidth();
-		int height = layer.getHeight();
+		TiledMapTileLayer layer;
 		
-		this.width = width;
-		this.height = height;
-	
-		map = new Tile[width][height];
+		int n = tilemap.getLayers().getCount();
 		
-		TextureRegion texture;
+		this.size = n;
 		
-		for (int x = 0; x < width; x++) {
-			for (int y = 0; y < height; y++) {
-				texture = layer.getCell(x, y).getTile().getTextureRegion();
-				map[x][y] = new Tile(texture, PROPERTIES.COLLIDABLE);
-			}
+		this.map = new Layer[n];
+		
+		layer = (TiledMapTileLayer) tilemap.getLayers().get(0);
+		this.map[0] = new Layer(tilemap, layer);
+		
+		for(int i = 1; i < n; i++) {
+			layer = (TiledMapTileLayer) tilemap.getLayers().get(i);
+			System.out.println(layer.getName());
+			this.map[i] = new Layer(tilemap, layer);
 		}
+		
+		this.width = layer.getWidth();
+		this.height = layer.getHeight();
 	}
 	
-	public Tile getTile(int x, int y) {
-		return map[x][y];
-	}
-
 	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
+		return this.width;
 	}
 	
+	public int getHeight() {
+		return this.height;
+	}
+	
+	public int getSize() {
+		return this.size;
+	}
+	
+	public Layer getLayer(int index) {
+		return map[index];
+	}
 }

@@ -2,11 +2,11 @@ package com.bezos.witsiemon.actors;
 
 public class Actor {
 	
-	private Map map;
+	private Layer map;
 	private int x;
 	private int y;
 	
-	public Actor(Map map, int x, int y) {
+	public Actor(Layer map, int x, int y) {
 		this.map = map;
 		this.x = x;
 		this.y = y;
