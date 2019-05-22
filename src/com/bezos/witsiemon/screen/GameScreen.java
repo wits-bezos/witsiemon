@@ -40,7 +40,7 @@ public class GameScreen extends AbstractScreen{
 		map = new Map("res/maps/matrix_west.tmx");
 		
 		avatar = new Texture("res/sprites/girl1_back_walk.000.png");
-		player = new Actor(map.getLayer(0), 0, 0);
+		player = new Actor(map.getLayer(0), 12, 0);
 		camera = new Camera();
 		
 		controller = new PlayerController(player);
@@ -53,7 +53,8 @@ public class GameScreen extends AbstractScreen{
 
 	@Override
 	public void render(float delta) {
-		camera.update(player.getX() + 0.5f, player.getY() + 0.5f);
+		player.update(delta);
+		camera.update(player.getWorld_x() + 0.5f, player.getWorld_y() + 0.5f);
 		
 		batch.begin();
 			float start_x = Gdx.graphics.getWidth()/2 - camera.getX()*Settings.SCALED_TILE_SIZE;
@@ -79,8 +80,8 @@ public class GameScreen extends AbstractScreen{
 				}
 			}
 			batch.draw(avatar,
-					start_x + player.getX()*Settings.SCALED_TILE_SIZE,
-					start_y + player.getY()*Settings.SCALED_TILE_SIZE,
+					start_x + player.getWorld_x()*Settings.SCALED_TILE_SIZE,
+					start_y + player.getWorld_y()*Settings.SCALED_TILE_SIZE,
 					Settings.SCALED_TILE_SIZE,
 					Settings.SCALED_TILE_SIZE*2f); 
 		batch.end();
