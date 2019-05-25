@@ -1,7 +1,7 @@
 # witsiemon
-[![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=addTest)](https://travis-ci.org/wits-bezos/witsiemon)
+[![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=addTest_2)](https://travis-ci.org/wits-bezos/witsiemon)
 
-[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=addTest)](https://coveralls.io/github/wits-bezos/witsiemon?branch=addTest)
+[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=addTest_2)](https://coveralls.io/github/wits-bezos/witsiemon?branch=addTest_2)
 
 [![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/addTest/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
 
