@@ -5,7 +5,9 @@ jdk:
   - oraclejdk8
 script: 
   - ant -file com.java/build.xml
+  - "mvn cobertura:cobertura"
   
 after_success:
- - mvn clean test jacoco:report coveralls:report
+  - bash <(curl -s https://codecov.io/bash)
+  - mvn clean test jacoco:report coveralls:report
  
