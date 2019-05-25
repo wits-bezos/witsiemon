@@ -7,7 +7,5 @@ script:
   - ant -file com.java/build.xml
   
 after_success:
-  - mvn test -B 
-  - bash <(curl -s https://codecov.io/bash)
-  - f com.java/target/reports/jacoco.xml
+ - mvn clean test jacoco:report coveralls:report
  
