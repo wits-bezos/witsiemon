@@ -1,7 +1,7 @@
 # witsiemon
 [![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=addTest)](https://travis-ci.org/wits-bezos/witsiemon)
 
-[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=master)](https://coveralls.io/github/wits-bezos/witsiemon?branch=java-maven-integration)
+[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=addTest)](https://coveralls.io/github/wits-bezos/witsiemon?branch=addTest)
 
 [![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/addTest/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
 
