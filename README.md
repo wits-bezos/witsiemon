@@ -34,4 +34,4 @@ As the player you main objective is to maximize your points. Travel through the 
 
 ~ ESC - Menu/Cancel
 
-# Credits
+# Thank You
