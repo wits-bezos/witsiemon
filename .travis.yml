@@ -7,5 +7,6 @@ script:
   - ant -file com.java/build.xml
   
 after_success:
-  - https://github.com/theWronskians/moodle_dev/wiki/Architecture
-
+  - export CODECOV_TOKEN="6dcb7a39-15d4-49b1-964e-efa2357d08a1" 
+  - bash <(curl -s https://codecov.io/bash)
+ 
