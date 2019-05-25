@@ -7,7 +7,7 @@ script:
   - ant -file com.java/build.xml
   
 after_success:
-  - export CODECOV_TOKEN="6dcb7a39-15d4-49b1-964e-efa2357d08a1" 
+  - mvn cobertura:cobertura 
   - bash <(curl -s https://codecov.io/bash)
   - f com.java/target/reports/jacoco.xml
  
