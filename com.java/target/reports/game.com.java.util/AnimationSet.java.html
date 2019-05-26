@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AnimationSet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.java</a> &gt; <a href="index.source.html" class="el_package">game.com.java.util</a> &gt; <span class="el_source">AnimationSet.java</span></div><h1>AnimationSet.java</h1><pre class="source lang-java linenums">package game.com.java.util;
+
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import game.com.java.model.DIRECTION;
+
+public class AnimationSet {
+	
+	private Map&lt;DIRECTION, Animation&gt; walking;
+	private Map&lt;DIRECTION, TextureRegion&gt; standing;
+	
+<span class="nc" id="L16">	public AnimationSet(Animation walkNorth, </span>
+			Animation walkSouth, 
+			Animation walkEast, 
+			Animation walkWest, 
+			TextureRegion standNorth, 
+			TextureRegion standSouth, 
+			TextureRegion standEast, 
+			TextureRegion standWest ) {
+<span class="nc" id="L24">		walking = new HashMap&lt;DIRECTION, Animation&gt;();</span>
+<span class="nc" id="L25">		walking.put(DIRECTION.NORTH,walkNorth);</span>
+<span class="nc" id="L26">		walking.put(DIRECTION.SOUTH,walkSouth);</span>
+<span class="nc" id="L27">		walking.put(DIRECTION.EAST,walkEast);</span>
+<span class="nc" id="L28">		walking.put(DIRECTION.WEST,walkWest);</span>
+<span class="nc" id="L29">		standing = new HashMap&lt;DIRECTION, TextureRegion&gt;();</span>
+<span class="nc" id="L30">		standing.put(DIRECTION.NORTH, standNorth);</span>
+<span class="nc" id="L31">		standing.put(DIRECTION.SOUTH, standSouth);</span>
+<span class="nc" id="L32">		standing.put(DIRECTION.EAST, standEast);</span>
+<span class="nc" id="L33">		standing.put(DIRECTION.WEST, standWest);</span>
+<span class="nc" id="L34">	}</span>
+	
+	public Animation getWalking(DIRECTION dir) {
+<span class="nc" id="L37">		return walking.get(dir);</span>
+	}
+	
+	public TextureRegion getStanding(DIRECTION dir) {
+<span class="nc" id="L41">		return standing.get(dir);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

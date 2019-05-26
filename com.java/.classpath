@@ -25,5 +25,15 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="libGdx/gdx-1.9.9.jar"/>
 	<classpathentry kind="lib" path="libGdx/gdx-backend-lwjgl-1.9.9.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="libGdx/gdx-tools-1.9.9.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-backend-lwjgl-natives.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-backend-lwjgl.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-freetype-natives.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-freetype.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-natives.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-tools.jar"/>
+	<classpathentry kind="lib" path="lib/gdx.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
