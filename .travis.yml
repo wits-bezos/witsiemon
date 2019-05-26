@@ -9,4 +9,5 @@ script:
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - f com.java/target/reports/index.html
   - mvn clean test jacoco:report coveralls:report
