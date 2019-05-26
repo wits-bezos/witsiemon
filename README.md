@@ -1,9 +1,9 @@
 # witsiemon
-[![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=java-maven-integration)](https://travis-ci.org/wits-bezos/witsiemon)
+[![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=java-maven-integration_1)](https://travis-ci.org/wits-bezos/witsiemon)
 
-[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=master)](https://coveralls.io/github/wits-bezos/witsiemon?branch=java-maven-integration)
+[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=java-maven-integration_1)](https://coveralls.io/github/wits-bezos/witsiemon?branch=java-maven-integration_1)
 
-[![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/java-maven-integration/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
+[![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/java-maven-integration_1/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
 
 
 Witsiemon is an RPG monster capturing game based on the Wits University campus map.
