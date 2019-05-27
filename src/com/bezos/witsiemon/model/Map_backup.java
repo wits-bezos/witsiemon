@@ -1,4 +1,4 @@
-package com.bezos.witsiemon.actors;
+package com.bezos.witsiemon.model;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;

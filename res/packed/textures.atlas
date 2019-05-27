@@ -1,0 +1,118 @@
+
+textures.png
+size: 256,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+player1_stand_east
+  rotate: false
+  xy: 2, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+player1_walk_east
+  rotate: false
+  xy: 2, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 1
+player1_stand_north
+  rotate: false
+  xy: 20, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+player1_walk_north
+  rotate: false
+  xy: 20, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 1
+player1_stand_south
+  rotate: false
+  xy: 38, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+player1_walk_south
+  rotate: false
+  xy: 38, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 1
+player1_stand_west
+  rotate: false
+  xy: 56, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+player1_walk_west
+  rotate: false
+  xy: 56, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 1
+player1_walk_east
+  rotate: false
+  xy: 74, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 0
+player1_walk_east
+  rotate: false
+  xy: 92, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 2
+player1_walk_north
+  rotate: false
+  xy: 110, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 0
+player1_walk_north
+  rotate: false
+  xy: 128, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 2
+player1_walk_south
+  rotate: false
+  xy: 146, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 0
+player1_walk_south
+  rotate: false
+  xy: 164, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 2
+player1_walk_west
+  rotate: false
+  xy: 182, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 0
+player1_walk_west
+  rotate: false
+  xy: 200, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: 2

@@ -1,4 +1,4 @@
-package com.bezos.witsiemon.actors;
+package com.bezos.witsiemon.model;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;

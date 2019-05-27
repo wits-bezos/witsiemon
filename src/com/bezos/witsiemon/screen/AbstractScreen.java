@@ -6,7 +6,7 @@
 package com.bezos.witsiemon.screen;
 
 import com.badlogic.gdx.Screen;
-import com.bezos.witsiemon.Pokemon;
+import com.bezos.witsiemon.Witsiemon;
 
 /**
  *
@@ -14,9 +14,9 @@ import com.bezos.witsiemon.Pokemon;
  */
 public abstract class AbstractScreen implements Screen {
 
-	private Pokemon app;
+	private Witsiemon app;
 	
-	public AbstractScreen(Pokemon app){
+	public AbstractScreen(Witsiemon app){
 		this.app = app;
 	}
 	

@@ -22,7 +22,7 @@ public class Main {
 		config.height = 400;
 		config.vSyncEnabled = true;
 		
-		new LwjglApplication(new Pokemon(), config);
+		new LwjglApplication(new Witsiemon(), config);
 	}
 	
 }

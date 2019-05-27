@@ -7,7 +7,9 @@ package com.bezos.witsiemon;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.bezos.witsiemon.screen.GameScreen;
 
 /**
@@ -15,12 +17,18 @@ import com.bezos.witsiemon.screen.GameScreen;
  * @author vasty
  */
 
-public class Pokemon extends Game{
+public class Witsiemon extends Game{
 	
 	private GameScreen screen;
 	
+	private AssetManager assetmanager;
+	
 	@Override
 	public void create() {
+		assetmanager = new AssetManager();
+		assetmanager.load("res/packed/textures.atlas", TextureAtlas.class);
+		assetmanager.finishLoading();
+		
 		screen = new GameScreen(this);
 		this.setScreen(screen);
 	}
@@ -31,6 +39,10 @@ public class Pokemon extends Game{
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
 		super.render();
+	}
+
+	public AssetManager getAssetmanager() {
+		return assetmanager;
 	}
 	
 }

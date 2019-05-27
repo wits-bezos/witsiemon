@@ -1,4 +1,4 @@
-package com.bezos.witsiemon.actors;
+package com.bezos.witsiemon.model;
 
 public enum PROPERTIES {
 	BLOCKED,
