@@ -1,4 +1,4 @@
-package game.com.java.model;
+package src.witsiemon.model;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,8 +9,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 
-import game.com.java.Witsiemon;
-import game.com.java.util.AnimationSet;
+import src.witsiemon.model.Witsiemon;
+import src.witsiemon.model.AnimationSet;
 
 public class ActorTest {
 	
