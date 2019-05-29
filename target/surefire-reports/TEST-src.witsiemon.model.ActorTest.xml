@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.controller.PlayerControllerTest" time="0.345" tests="4" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.model.ActorTest" time="0.004" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -60,16 +60,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="keyUp_get_false" classname="src.witsiemon.controller.PlayerControllerTest" time="0.016"/>
-  <testcase name="keyUp" classname="src.witsiemon.controller.PlayerControllerTest" time="0.032">
-    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyUp(PlayerControllerTest.java:32)
-]]></failure>
-  </testcase>
-  <testcase name="keyDown_get_false" classname="src.witsiemon.controller.PlayerControllerTest" time="0"/>
-  <testcase name="keyDown_newScreenFalse_newScreenTrue" classname="src.witsiemon.controller.PlayerControllerTest" time="0">
-    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyDown_newScreenFalse_newScreenTrue(PlayerControllerTest.java:21)
-]]></failure>
-  </testcase>
+  <testcase name="getWorldY_return_float" classname="src.witsiemon.model.ActorTest" time="0.004"/>
+  <testcase name="getWorldX_return_float" classname="src.witsiemon.model.ActorTest" time="0"/>
+  <testcase name="getY_return_five" classname="src.witsiemon.model.ActorTest" time="0"/>
+  <testcase name="getX_return_five" classname="src.witsiemon.model.ActorTest" time="0"/>
+  <testcase name="move_return_float" classname="src.witsiemon.model.ActorTest" time="0"/>
 </testsuite>

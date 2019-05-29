@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: WitsiemonTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in WitsiemonTest
+getAssetManager_check_assetmanager(WitsiemonTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: com/badlogic/gdx/ApplicationLogger
+	at WitsiemonTest.getAssetManager_check_assetmanager(WitsiemonTest.java:27)
+Caused by: java.lang.ClassNotFoundException: com.badlogic.gdx.ApplicationLogger
+	at WitsiemonTest.getAssetManager_check_assetmanager(WitsiemonTest.java:27)
+

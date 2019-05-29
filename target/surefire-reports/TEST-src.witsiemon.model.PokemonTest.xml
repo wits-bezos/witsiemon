@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.controller.PlayerControllerTest" time="0.345" tests="4" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.model.PokemonTest" time="0" tests="8" errors="8" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -60,16 +60,44 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="keyUp_get_false" classname="src.witsiemon.controller.PlayerControllerTest" time="0.016"/>
-  <testcase name="keyUp" classname="src.witsiemon.controller.PlayerControllerTest" time="0.032">
-    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyUp(PlayerControllerTest.java:32)
-]]></failure>
+  <testcase name="isAwake_0_false" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.isAwake_0_false(PokemonTest.java:42)
+</error>
   </testcase>
-  <testcase name="keyDown_get_false" classname="src.witsiemon.controller.PlayerControllerTest" time="0"/>
-  <testcase name="keyDown_newScreenFalse_newScreenTrue" classname="src.witsiemon.controller.PlayerControllerTest" time="0">
-    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyDown_newScreenFalse_newScreenTrue(PlayerControllerTest.java:21)
-]]></failure>
+  <testcase name="setHP_100_100" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.setHP_100_100(PokemonTest.java:12)
+</error>
+  </testcase>
+  <testcase name="getName_test_test" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.getName_test_test(PokemonTest.java:47)
+</error>
+  </testcase>
+  <testcase name="isAwake_100_true" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.isAwake_100_true(PokemonTest.java:37)
+</error>
+  </testcase>
+  <testcase name="setDMG_20_80" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.setDMG_20_80(PokemonTest.java:19)
+</error>
+  </testcase>
+  <testcase name="setHP_20_100" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.setHP_20_100(PokemonTest.java:25)
+</error>
+  </testcase>
+  <testcase name="getSP_10_10" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.getSP_10_10(PokemonTest.java:53)
+</error>
+  </testcase>
+  <testcase name="getSpeed_null_10" classname="src.witsiemon.model.PokemonTest" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at src.witsiemon.model.PokemonTest.getSpeed_null_10(PokemonTest.java:31)
+</error>
   </testcase>
 </testsuite>
