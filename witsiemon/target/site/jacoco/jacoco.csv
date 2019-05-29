@@ -1,0 +1,17 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+witsiemon,src.witsiemon,Main,26,0,0,0,8,0,2,0,2,0
+witsiemon,src.witsiemon,Witsiemon,42,0,0,0,12,0,4,0,4,0
+witsiemon,src.witsiemon,Settings,13,0,0,0,4,0,2,0,2,0
+witsiemon,src.witsiemon.model,Actor,325,38,26,0,59,12,22,1,9,1
+witsiemon,src.witsiemon.model,TileMap,0,66,0,6,0,14,0,7,0,4
+witsiemon,src.witsiemon.model,TERRAIN,0,24,0,0,0,3,0,1,0,1
+witsiemon,src.witsiemon.model,Actor.ACTOR_STATE,0,24,0,0,0,3,0,1,0,1
+witsiemon,src.witsiemon.model,DIRECTION,6,63,0,0,2,9,2,2,2,2
+witsiemon,src.witsiemon.model,Camera,0,22,0,0,0,8,0,4,0,4
+witsiemon,src.witsiemon.model,Tile,0,16,0,0,0,7,0,4,0,4
+witsiemon,src.witsiemon.model,World,3,0,0,0,1,0,1,0,1,0
+witsiemon,src.witsiemon.controller,PlayerController,69,26,18,6,24,10,12,4,2,2
+witsiemon,src.witsiemon.util,AnimationSet,73,0,0,0,14,0,3,0,3,0
+witsiemon,src.witsiemon.util,TexturePackerTool,8,0,0,0,3,0,2,0,2,0
+witsiemon,src.witsiemon.screen,AbstractScreen,6,0,0,0,3,0,1,0,1,0
+witsiemon,src.witsiemon.screen,GameScreen,248,0,6,0,47,0,11,0,8,0
