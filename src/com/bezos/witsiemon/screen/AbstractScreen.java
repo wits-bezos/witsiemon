@@ -8,10 +8,6 @@ package com.bezos.witsiemon.screen;
 import com.badlogic.gdx.Screen;
 import com.bezos.witsiemon.Witsiemon;
 
-/**
- *
- * @author vasty
- */
 public abstract class AbstractScreen implements Screen {
 
 	private Witsiemon app;
@@ -19,6 +15,8 @@ public abstract class AbstractScreen implements Screen {
 	public AbstractScreen(Witsiemon app){
 		this.app = app;
 	}
+	
+	public abstract void update(float delta);
 	
 	@Override
 	public abstract void show();

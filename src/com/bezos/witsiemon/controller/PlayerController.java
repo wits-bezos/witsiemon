@@ -10,6 +10,7 @@ public class PlayerController extends InputAdapter {
 	private Actor player;
 	
 	private boolean up, down, left, right;
+	private boolean battle = false;
 	
 	public PlayerController(Actor player) {
 		this.player = player;
@@ -28,6 +29,9 @@ public class PlayerController extends InputAdapter {
 		}
 		if (keycode == Keys.RIGHT) {
 			right = true;
+		}
+		if (keycode == Keys.B) {
+			battle = true;
 		}
 		
 		return false;
@@ -64,5 +68,12 @@ public class PlayerController extends InputAdapter {
 		else if(right) {
 			player.move(DIRECTION.EAST);
 		}
+	}
+	
+	public Boolean getBattle() {
+		if (battle) {
+			return true;
+		}
+		return false;
 	}
 }

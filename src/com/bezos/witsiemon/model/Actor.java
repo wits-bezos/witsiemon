@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Interpolation;
 import com.bezos.witsiemon.util.AnimationSet;
 
+
 public class Actor {
 	
 	private Map map;

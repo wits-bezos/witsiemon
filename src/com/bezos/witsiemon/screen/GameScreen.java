@@ -19,11 +19,8 @@ import com.bezos.witsiemon.model.Actor;
 import com.bezos.witsiemon.model.Camera;
 import com.bezos.witsiemon.model.Map;
 import com.bezos.witsiemon.util.AnimationSet;
+import com.bezos.witsiemon.screen.BattleScreen;
 
-/**
- *
- * @author vasty
- */
 public class GameScreen extends AbstractScreen{
 
 	private Map map;
@@ -31,6 +28,11 @@ public class GameScreen extends AbstractScreen{
 	private Camera camera;
 	private Actor player;
 	private PlayerController controller;
+	private BattleScreen battleScreen;
+	
+	private Witsiemon app;
+	
+	private Boolean battle = false;
 	
 	//Textures
 	private Texture avatar;
@@ -39,6 +41,7 @@ public class GameScreen extends AbstractScreen{
 	
 	public GameScreen(Witsiemon app) {
 		super(app);
+		this.app = app;
 		batch = new SpriteBatch();
 		map = new Map("res/maps/matrix_west.tmx");
 		
@@ -61,6 +64,13 @@ public class GameScreen extends AbstractScreen{
 		
 		controller = new PlayerController(player);
 	}
+	
+	@Override
+	public void update(float delta) {
+		battleScreen = new BattleScreen(app);
+		app.battle = true;
+		app.setScreen(battleScreen);
+	}
 
 	@Override
 	public void show() {
@@ -70,6 +80,10 @@ public class GameScreen extends AbstractScreen{
 	@Override
 	public void render(float delta) {
 		controller.update(delta);
+		battle = controller.getBattle();
+		if (battle) {
+			update(delta);
+		}
 		
 		player.update(delta);
 		camera.update(player.getWorld_x() + 0.5f, player.getWorld_y() + 0.5f);

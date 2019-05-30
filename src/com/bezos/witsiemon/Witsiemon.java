@@ -10,16 +10,15 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.bezos.witsiemon.screen.BattleScreen;
 import com.bezos.witsiemon.screen.GameScreen;
 
-/**
- *
- * @author vasty
- */
 
 public class Witsiemon extends Game{
 	
 	private GameScreen screen;
+	private BattleScreen battleScreen;
+	public boolean battle;
 	
 	private AssetManager assetmanager;
 	
@@ -30,6 +29,7 @@ public class Witsiemon extends Game{
 		assetmanager.finishLoading();
 		
 		screen = new GameScreen(this);
+		battleScreen = new BattleScreen(this);
 		this.setScreen(screen);
 	}
 	
