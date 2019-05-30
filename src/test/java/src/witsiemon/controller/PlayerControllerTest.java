@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.badlogic.gdx.Input.Keys;
+
 import src.witsiemon.controller.PlayerController;
 
 public class PlayerControllerTest {
@@ -18,7 +20,7 @@ public class PlayerControllerTest {
 		
 		boolean result = pc.keyDown(keycode);
 		
-		assertEquals(result,false);
+		assertEquals(result,true);
 	}
 	
 	@Test
@@ -27,9 +29,9 @@ public class PlayerControllerTest {
 		PlayerController pc = new PlayerController(p);
 		int keycode = 65;
 		
-		boolean result = pc.keyUp(keycode);
+		boolean result = pc.keyUp(Keys.A);
 		
-		assertEquals(result,false);
+		assertEquals(result,true);
 	}
 	@Test
 	public void keyDown_get_false() {
@@ -61,4 +63,51 @@ public class PlayerControllerTest {
 		// verify
 		assertEquals(result, false);
 	}
+	@Test
+	public void keyDown_left_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.LEFT);
+		assertEquals(pc.left,true);
+	}
+	
+	@Test
+	public void keyDown_right_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.RIGHT);
+		assertEquals(pc.right,true);
+	}
+	
+	@Test
+	public void keyUp_left_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.LEFT);
+		assertEquals(pc.up,true);
+	}
+	@Test
+	public void keyUp_right_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.RIGHT);
+		assertEquals(pc.right,true);
+	}
+	@Test
+	public void keyUp_up_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.UP);
+		assertEquals(pc.up,true);
+	}
+	@Test
+	public void keyUp_down_true() {
+		src.witsiemon.model.Actor p = null;
+		PlayerController pc = new PlayerController(p);
+		boolean result  = pc.keyUp(Keys.DOWN);
+		assertEquals(pc.up,true);
+	}
+	
+	
+	
 }
