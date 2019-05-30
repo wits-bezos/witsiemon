@@ -3,7 +3,10 @@ ignore:
   - "src/main/java/src/witsiemon/util"
   - "src/main/java/src/witsiemon/Main.java"
   - "src/main/java/src/witsiemon/Witsiemon.java"
-   - "src/main/java/src/witsiemon/model/world.java"  # ignore folders and all its contents
+  - "src/main/java/src/witsiemon/model/world.java"  
   - "src/main/java/src/util/AnimationSet.java"
   - "src/main/java/src/util/TexturePackerTool.java"
+  - "src/main/java/src/witsiemon/model/Pokemon.java"
+  - "src/main/java/src/witsiemon/Settings.java"
+  - "src/main/java/src/witsiemon/model/World.java"
 
