@@ -3,7 +3,7 @@ witsiemon,src.witsiemon,Main,29,0,0,0,8,0,2,0,2,0
 witsiemon,src.witsiemon,Witsiemon,77,6,2,0,16,3,4,1,3,1
 witsiemon,src.witsiemon,Settings,13,0,0,0,4,0,2,0,2,0
 witsiemon,src.witsiemon.model,Actor,185,178,20,6,35,35,16,7,3,7
-witsiemon,src.witsiemon.model,Pokemon,68,17,6,0,19,6,12,1,9,1
+witsiemon,src.witsiemon.model,Pokemon,85,0,6,0,25,0,13,0,10,0
 witsiemon,src.witsiemon.model,TileMap,0,66,0,6,0,13,0,7,0,4
 witsiemon,src.witsiemon.model,TERRAIN,0,24,0,0,0,3,0,1,0,1
 witsiemon,src.witsiemon.model,Actor.ACTOR_STATE,0,24,0,0,0,3,0,1,0,1

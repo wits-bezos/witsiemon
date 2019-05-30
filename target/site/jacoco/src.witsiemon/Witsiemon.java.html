@@ -6,35 +6,51 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
+import src.witsiemon.model.Pokemon;
 import src.witsiemon.screen.GameScreen;
+import src.witsiemon.screen.battleScreen;
 
-<span class="nc" id="L11">public class Witsiemon extends Game {</span>
+public class Witsiemon extends Game {
 	
 	private GameScreen screen;
 	private AssetManager assetManager;
+	private battleScreen battleScreen;
+	private Pokemon user;
+	private Pokemon enemy;
+	public boolean battle;
 	
+<span class="fc" id="L22">	public Witsiemon(boolean battle){</span>
+<span class="fc" id="L23">		this.battle = battle;</span>
+<span class="fc" id="L24">	}</span>
 	@Override
 	public void create() {
-<span class="nc" id="L18">		assetManager = new AssetManager();</span>
-<span class="nc" id="L19">		assetManager.load(&quot;res/packed/textures.atlas&quot;, TextureAtlas.class);</span>
-<span class="nc" id="L20">		assetManager.finishLoading();</span>
+<span class="nc" id="L27">		assetManager = new AssetManager();</span>
+<span class="nc" id="L28">		assetManager.load(&quot;res/packed/textures.atlas&quot;, TextureAtlas.class);</span>
+<span class="nc" id="L29">		assetManager.finishLoading();</span>
 		
-		
-<span class="nc" id="L23">		screen = new GameScreen(this);</span>
-		
-<span class="nc" id="L25">		this.setScreen(screen);</span>
-<span class="nc" id="L26">	}</span>
+<span class="nc" id="L31">		user = new Pokemon(&quot;charizard&quot;,100,20,30,6);</span>
+<span class="nc" id="L32">		enemy = new Pokemon(&quot;ekans&quot;,100,15,2,1);</span>
+<span class="nc" id="L33">		battleScreen = new battleScreen(this, enemy, user);</span>
+<span class="nc" id="L34">		screen = new GameScreen(this);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(battle) {</span>
+<span class="nc" id="L36">			this.setScreen(battleScreen);</span>
+	
+		}
+		else {
+<span class="nc" id="L40">			this.setScreen(screen);</span>
+		}
+<span class="nc" id="L42">	}</span>
 	
 	@Override
 	public void render() {
-<span class="nc" id="L30">		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);</span>
-<span class="nc" id="L31">		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);</span>
+<span class="nc" id="L46">		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);</span>
+<span class="nc" id="L47">		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);</span>
 		
-<span class="nc" id="L33">		super.render();</span>
-<span class="nc" id="L34">	}</span>
+<span class="nc" id="L49">		super.render();</span>
+<span class="nc" id="L50">	}</span>
 	
 	public AssetManager getAssetManager() {
-<span class="nc" id="L37">		return assetManager;</span>
+<span class="nc" id="L53">		return assetManager;</span>
 	}
 
 }

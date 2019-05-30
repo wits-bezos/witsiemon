@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.model.CameraTest" time="0.004" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="src.witsiemon.model.CameraTest" time="0" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\medici.child\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5475200798723019109.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\medici.child\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5235437567202679040.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_211/bin/server;C:/Program Files/Java/jre1.8.0_211/bin;C:/Program Files/Java/jre1.8.0_211/lib/amd64;C:\Users\medici.child\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.7;C:\Program Files\Git\cmd;C:\Users\medici.child\apache-maven-3.6.1\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\medici.child\AppData\Local\Microsoft\WindowsApps;;C:\Users\medici.child\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>

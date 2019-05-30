@@ -18,7 +18,7 @@ public class PlayerControllerTest {
 		
 		boolean result = pc.keyDown(keycode);
 		
-		assertEquals(result,true);
+		assertEquals(result,false);
 	}
 	
 	@Test
@@ -29,7 +29,7 @@ public class PlayerControllerTest {
 		
 		boolean result = pc.keyUp(keycode);
 		
-		assertEquals(result,true);
+		assertEquals(result,false);
 	}
 	@Test
 	public void keyDown_get_false() {

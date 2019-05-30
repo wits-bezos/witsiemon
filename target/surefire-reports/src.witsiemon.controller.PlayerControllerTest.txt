@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: src.witsiemon.controller.PlayerControllerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.345 sec <<< FAILURE! - in src.witsiemon.controller.PlayerControllerTest
-keyUp(src.witsiemon.controller.PlayerControllerTest)  Time elapsed: 0.032 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyUp(PlayerControllerTest.java:32)
-
-keyDown_newScreenFalse_newScreenTrue(src.witsiemon.controller.PlayerControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<false> but was:<true>
-	at src.witsiemon.controller.PlayerControllerTest.keyDown_newScreenFalse_newScreenTrue(PlayerControllerTest.java:21)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.393 sec - in src.witsiemon.controller.PlayerControllerTest
