@@ -9,4 +9,5 @@ ignore:
   - "src/main/java/src/witsiemon/model/Pokemon.java"
   - "src/main/java/src/witsiemon/Settings.java"
   - "src/main/java/src/witsiemon/model/World.java"
+  - "src/main/java/src/witsiemon/screen"
 
