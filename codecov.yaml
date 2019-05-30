@@ -21,7 +21,9 @@ parsers:
       macro: no
 
 ignore:
-  - "src/main/java/src/witsiemon/model/pokemon.java"  # ignore folders and all its contents
+  - "src/main/java/src/witsiemon/model/world.java"  # ignore folders and all its contents
+  - "src/main/java/src/screen/abstractScreen.java"
+
 comment:
   layout: "header, diff"
   behavior: default
