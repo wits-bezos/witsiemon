@@ -67,37 +67,37 @@ public class PlayerControllerTest {
 	public void keyDown_left_true() {
 		src.witsiemon.model.Actor p = null;
 		PlayerController pc = new PlayerController(p);
-		boolean result  = pc.keyUp(37);
-		assertEquals(result,true);
+		pc.keyUp(37);
+		assertEquals(pc.left,true);
 	}
 	
 	@Test
 	public void keyDown_right_true() {
 		src.witsiemon.model.Actor p = null;
 		PlayerController pc = new PlayerController(p);
-		boolean result  = pc.keyUp(39);
-		assertEquals(result,true);
+		pc.keyUp(39);
+		assertEquals(pc.right,true);
 	}
 	
 	@Test
 	public void keyUp_left_true() {
 		src.witsiemon.model.Actor p = null;
 		PlayerController pc = new PlayerController(p);
-		boolean result  = pc.keyUp(37);
-		assertEquals(result,true);
+		pc.keyUp(37);
+		assertEquals(pc.left,true);
 	}
 	@Test
 	public void keyUp_right_true() {
 		src.witsiemon.model.Actor p = null;
 		PlayerController pc = new PlayerController(p);
-		boolean result  = pc.keyUp(39);
-		assertEquals(result,true);
+		pc.keyUp(39);
+		assertEquals(pc.right,true);
 	}
 	@Test
 	public void keyUp_up_true() {
 		src.witsiemon.model.Actor p = null;
 		PlayerController pc = new PlayerController(p);
-		boolean result  = pc.keyUp(38);
+		pc.keyUp(38);
 		assertEquals(pc.up,true);
 	}
 	@Test
