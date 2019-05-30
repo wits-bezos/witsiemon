@@ -1,0 +1,5 @@
+ignore:
+  - "src/main/java/src/witsiemon/screen"  
+  - "src/main/java/src/witsiemon/util"
+  - "src/main/java/src/witsiemon/Main.java"
+  - "src/main/java/src/witsiemon/Witsiemon.java"
