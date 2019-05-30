@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>battleScreen.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">witsiemon</a> &gt; <a href="index.source.html" class="el_package">src.witsiemon.screen</a> &gt; <span class="el_source">battleScreen.java</span></div><h1>battleScreen.java</h1><pre class="source lang-java linenums">package src.witsiemon.screen;
+
+import java.awt.Font;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+import src.witsiemon.Main;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.backends.lwjgl.audio.Mp3.Music;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+
+import src.witsiemon.Witsiemon;
+import src.witsiemon.model.Pokemon;
+
+public class battleScreen extends AbstractScreen{
+
+	Pokemon enemy;
+	Pokemon user;
+	Batch batch;
+	public static Texture backgroundTexture;
+    public static Sprite backgroundSprite;
+    public static Texture attack;
+    public static Sprite attackSprite;
+    public static Texture heal;
+    public static Sprite healSprite;
+    public static Texture battle;
+    public static Sprite battleSprite;
+    public static Texture victory;
+    public static Sprite victorySprite;
+<span class="nc" id="L45">    int game = 0;</span>
+    Witsiemon appp;
+    private float elapsed;
+    
+
+   
+    
+<span class="nc" id="L52">	ShapeRenderer shapeRenderer1 =  new ShapeRenderer();</span>
+<span class="nc" id="L53">	ShapeRenderer shapeRenderer2 =  new ShapeRenderer();</span>
+<span class="nc" id="L54">	ShapeRenderer shapeRenderer3 =  new ShapeRenderer();</span>
+<span class="nc" id="L55">	ShapeRenderer shapeRenderer4 =  new ShapeRenderer();</span>
+<span class="nc" id="L56">	ShapeRenderer shapeRenderer5 =  new ShapeRenderer();</span>
+
+<span class="nc" id="L58">	BitmapFont font = new BitmapFont();</span>
+<span class="nc" id="L59">	BitmapFont font2 = new BitmapFont();</span>
+
+	private com.badlogic.gdx.audio.Music music_level1;
+	
+
+<span class="nc" id="L64">	private boolean user_turn = true;</span>
+
+
+	
+
+	public battleScreen(Witsiemon app, Pokemon enemy, Pokemon user) {
+<span class="nc" id="L70">		super(app);</span>
+<span class="nc" id="L71">		this.appp = app;</span>
+<span class="nc" id="L72">		this.enemy = enemy;</span>
+<span class="nc" id="L73">		this.user = user;</span>
+<span class="nc" id="L74">		batch = new SpriteBatch();</span>
+<span class="nc" id="L75">		backgroundTexture = new Texture(&quot;res/background.png&quot;);</span>
+<span class="nc" id="L76">        backgroundSprite =new Sprite(backgroundTexture);</span>
+        
+<span class="nc" id="L78">        attack = new Texture(&quot;res/attack.png&quot;);</span>
+<span class="nc" id="L79">        attackSprite = new Sprite(attack);</span>
+        
+<span class="nc" id="L81">        heal =  new Texture(&quot;res/heal.png&quot;);</span>
+<span class="nc" id="L82">        healSprite = new Sprite(heal);</span>
+        
+<span class="nc" id="L84">        battle = new Texture(&quot;res/battle.png&quot;);</span>
+<span class="nc" id="L85">        battleSprite = new Sprite(battle);</span>
+        
+<span class="nc" id="L87">        victory = new Texture(&quot;res/victory.png&quot;);</span>
+<span class="nc" id="L88">        victorySprite = new Sprite(victory);</span>
+
+		// TODO Auto-generated constructor stub
+<span class="nc" id="L91">	}</span>
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L97">	}</span>
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L103">	}</span>
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L109">	}</span>
+
+
+	public void renderBackground() {
+<span class="nc" id="L113">        backgroundSprite.draw(batch);</span>
+<span class="nc" id="L114">	}</span>
+	
+	private void renderAttack() {
+<span class="nc" id="L117">		batch.draw(attack,  200,180,180,180);</span>
+
+<span class="nc" id="L119">	}</span>
+	
+	private void renderHeal() {
+<span class="nc" id="L122">		batch.draw(heal,  200,180,180,180);</span>
+
+<span class="nc" id="L124">	}</span>
+	
+	private void renderBattle() {
+<span class="nc" id="L127">		batch.draw(battle,  200,180,180,180);</span>
+
+<span class="nc" id="L129">	}</span>
+	
+	private void renderVictory() {
+<span class="nc" id="L132">		batch.draw(victory,  200,180,180,180);</span>
+<span class="nc" id="L133">	}</span>
+	
+	
+	@Override
+
+	public void render(float delta) {
+		
+<span class="nc" id="L140">		batch.begin();</span>
+<span class="nc" id="L141">		renderBackground();</span>
+<span class="nc" id="L142">		batch.end();		</span>
+			
+			
+<span class="nc" id="L145">			batch.begin();</span>
+<span class="nc" id="L146">			batch.draw(enemy.getSprite(),450,220,150,132);</span>
+<span class="nc" id="L147">			batch.draw(user.getSprite(), 0, 200, 200, 203);</span>
+<span class="nc" id="L148">			batch.end();</span>
+<span class="nc bnc" id="L149" title="All 2 branches missed.">			if(game == 0) {	</span>
+
+<span class="nc" id="L151">			shapeRenderer5.begin(ShapeType.Filled);</span>
+<span class="nc" id="L152">			shapeRenderer5.setColor(Color.WHITE);</span>
+<span class="nc" id="L153">			shapeRenderer5.rect(180, 40, 250, 100);</span>
+<span class="nc" id="L154">			shapeRenderer5.end();</span>
+
+<span class="nc" id="L156">			batch.begin();</span>
+<span class="nc" id="L157">			font.setColor(Color.BLUE);</span>
+<span class="nc" id="L158">			font.draw(batch, &quot;A) ATTACK&quot;, 190, 70);</span>
+<span class="nc" id="L159">			font.draw(batch, &quot;B) SPECIAL ATTACK&quot;, 190, 100);</span>
+<span class="nc" id="L160">			font.draw(batch, &quot;D) HEAL&quot;, 190, 130);</span>
+<span class="nc" id="L161">			batch.end();	</span>
+			
+<span class="nc" id="L163">			Gdx.input.setInputProcessor(new InputAdapter() {</span>
+		        @Override public boolean keyUp (int keycode) {
+<span class="nc" id="L165">	            	font.setColor(Color.RED);</span>
+
+		        	//Attack
+<span class="nc bnc" id="L168" title="All 2 branches missed.">		            if (keycode == Input.Keys.A) { </span>
+<span class="nc" id="L169">			        	batch.begin();</span>
+<span class="nc" id="L170">		            	font.draw(batch, &quot;A) ATTACK&quot;, 190, 70);</span>
+<span class="nc" id="L171">		            	batch.end();</span>
+<span class="nc bnc" id="L172" title="All 2 branches missed.">		                if(user_turn) {</span>
+<span class="nc" id="L173">		                	enemy.setDMG(user.getDMG());</span>
+<span class="nc" id="L174">		                	user_turn = false;</span>
+<span class="nc" id="L175">		    				return true;</span>
+
+		                }
+		                else {
+<span class="nc" id="L179">		                	batch.begin();</span>
+<span class="nc" id="L180">			            	font.draw(batch, &quot;A) ATTACK&quot;, 190, 70);</span>
+<span class="nc" id="L181">		                	batch.end();</span>
+<span class="nc" id="L182">			            	user.setDMG(enemy.getDMG());</span>
+<span class="nc" id="L183">		                	user_turn = true;</span>
+<span class="nc" id="L184">		    				return true;</span>
+
+		                }
+
+		            }
+		            
+		            //DEFEND
+<span class="nc bnc" id="L191" title="All 2 branches missed.">		            else if(keycode ==Input.Keys.D) {</span>
+<span class="nc bnc" id="L192" title="All 2 branches missed.">		            	if(user_turn) {</span>
+<span class="nc" id="L193">							user.setHP(10);</span>
+<span class="nc" id="L194">							batch.begin();</span>
+<span class="nc" id="L195">							font.draw(batch, &quot;D) HEAL&quot;, 190, 130);</span>
+<span class="nc" id="L196">							batch.end();</span>
+<span class="nc" id="L197">							user_turn = false;</span>
+<span class="nc" id="L198">							return true;</span>
+
+						}
+						else {
+<span class="nc" id="L202">							enemy.setHP(10);</span>
+<span class="nc" id="L203">							batch.begin();</span>
+<span class="nc" id="L204">							font.draw(batch, &quot;D) HEAL&quot;, 190, 130);</span>
+<span class="nc" id="L205">							batch.end();</span>
+<span class="nc" id="L206">							user_turn = true;</span>
+<span class="nc" id="L207">							return true;</span>
+
+						}
+					}
+		            
+		            //HEAL
+<span class="nc bnc" id="L213" title="All 2 branches missed.">		            else if(keycode == Input.Keys.B) {</span>
+<span class="nc bnc" id="L214" title="All 2 branches missed.">		            	if(user_turn) {</span>
+<span class="nc" id="L215">		            		batch.begin();</span>
+<span class="nc" id="L216">		        			font.draw(batch, &quot;B) SPECIAL ATTACK&quot;, 190, 100);</span>
+<span class="nc" id="L217">		        			batch.end();</span>
+<span class="nc" id="L218">							enemy.setDMG(user.getSP());</span>
+<span class="nc" id="L219">							user_turn = false;</span>
+<span class="nc" id="L220">							return true;</span>
+
+						}
+						else {
+<span class="nc" id="L224">							batch.begin();</span>
+<span class="nc" id="L225">							font.draw(batch, &quot;B) SPECIAL ATTACK&quot;, 190, 100);</span>
+<span class="nc" id="L226">							batch.end();</span>
+<span class="nc" id="L227">							user.setDMG(enemy.getSP());</span>
+<span class="nc" id="L228">							user_turn = true;</span>
+<span class="nc" id="L229">							return true;</span>
+
+						}
+						
+					}
+<span class="nc" id="L234">					return true;</span>
+		        }
+		    });
+
+			}
+			
+<span class="nc" id="L240">			shapeRenderer1.begin(ShapeType.Filled);</span>
+<span class="nc" id="L241">			shapeRenderer1.setColor(Color.RED);</span>
+<span class="nc" id="L242">			shapeRenderer1.rect(20, 180, 150, 20);</span>
+<span class="nc" id="L243">			shapeRenderer1.end();</span>
+			
+<span class="nc" id="L245">			shapeRenderer2.begin(ShapeType.Filled);</span>
+<span class="nc" id="L246">			shapeRenderer2.setColor(Color.GREEN);</span>
+<span class="nc" id="L247">			shapeRenderer2.rect(20, 180, (float) (user.getHP()*1.5), 20);</span>
+<span class="nc" id="L248">			shapeRenderer2.end();</span>
+			
+<span class="nc" id="L250">			shapeRenderer3.begin(ShapeType.Filled);</span>
+<span class="nc" id="L251">			shapeRenderer3.setColor(Color.RED);</span>
+<span class="nc" id="L252">			shapeRenderer3.rect(450, 180, 150, 20);</span>
+<span class="nc" id="L253">			shapeRenderer3.end();</span>
+			
+<span class="nc" id="L255">			shapeRenderer4.begin(ShapeType.Filled);</span>
+<span class="nc" id="L256">			shapeRenderer4.setColor(Color.GREEN);</span>
+<span class="nc" id="L257">			shapeRenderer4.rect(450, 180, (float) (enemy.getHP()*1.5), 20);</span>
+<span class="nc" id="L258">			shapeRenderer4.end();</span>
+			
+			
+<span class="nc bnc" id="L261" title="All 4 branches missed.">			if(!enemy.isAwake() || !user.isAwake()) {</span>
+				
+<span class="nc" id="L263">				shapeRenderer1.begin(ShapeType.Filled);</span>
+<span class="nc" id="L264">				shapeRenderer1.setColor(Color.GRAY);</span>
+<span class="nc" id="L265">				shapeRenderer1.rect(180, 180, 250, 150);</span>
+<span class="nc" id="L266">				shapeRenderer1.end();</span>
+				
+<span class="nc" id="L268">				batch.begin();</span>
+<span class="nc" id="L269">				font2.setColor(Color.RED);</span>
+<span class="nc" id="L270">				font2.draw(batch, &quot;GAME OVER&quot;, 260, 290);</span>
+<span class="nc bnc" id="L271" title="All 2 branches missed.">				if(enemy.isAwake()) {</span>
+<span class="nc" id="L272">					font2.draw(batch, &quot;ENEMY HAS WON THE MATCH !!!&quot;, 190, 250);</span>
+				}
+				else {
+<span class="nc" id="L275">					font2.draw(batch,&quot; USER HAS WON THE MATCH !!!&quot;,190 , 250);</span>
+				}
+<span class="nc" id="L277">				batch.end();</span>
+
+				
+				
+<span class="nc" id="L281">				game = 1;</span>
+				//MAKE THE NEW SCREEN START RIGHT HERE
+<span class="nc" id="L283">				elapsed += delta;</span>
+<span class="nc bnc" id="L284" title="All 2 branches missed.">				if(elapsed &gt; 1.0) {</span>
+<span class="nc" id="L285">				newScreen();</span>
+				}
+
+
+					
+			
+
+				
+			}
+		
+<span class="nc" id="L295">	}</span>
+	
+
+	public void newScreen() {
+<span class="nc" id="L299">		int delay = 1000; // number of milliseconds to sleep</span>
+
+<span class="nc" id="L301">        long start = System.currentTimeMillis();</span>
+<span class="nc bnc" id="L302" title="All 2 branches missed.">        while(start &gt;= System.currentTimeMillis() - delay);</span>
+<span class="nc" id="L303">		appp.battle = false;</span>
+<span class="nc" id="L304">		GameScreen screen = new GameScreen(appp);</span>
+<span class="nc" id="L305">		appp.setScreen(screen);</span>
+        
+<span class="nc" id="L307">	}</span>
+	@Override
+	public void resize(int width, int height) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L312">	}</span>
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L318">	}</span>
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L324">	}</span>
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

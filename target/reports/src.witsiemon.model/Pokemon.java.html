@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pokemon.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">witsiemon</a> &gt; <a href="index.source.html" class="el_package">src.witsiemon.model</a> &gt; <span class="el_source">Pokemon.java</span></div><h1>Pokemon.java</h1><pre class="source lang-java linenums">package src.witsiemon.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.badlogic.gdx.graphics.Texture;
+
+
+public class Pokemon {
+	
+	private String name;
+	
+	private int level, HP, ATT, SP_ATT, SPEED;
+	Texture appearance;
+	
+<span class="nc" id="L16">	public Pokemon(String name, int HP, int ATT, int SP_ATT, int SPEED){</span>
+<span class="nc" id="L17">		this.name = name;</span>
+<span class="nc" id="L18">		this.HP = HP;</span>
+<span class="nc" id="L19">		this.ATT = ATT;</span>
+<span class="nc" id="L20">		this.SP_ATT = SP_ATT;</span>
+<span class="nc" id="L21">		this.SPEED = SPEED;</span>
+<span class="nc" id="L22">		this.appearance = new Texture(&quot;res/&quot; + name + &quot;.png&quot;);</span>
+<span class="nc" id="L23">	}</span>
+	
+	public boolean isAwake() {
+<span class="nc bnc" id="L26" title="All 2 branches missed.">		if(this.HP &gt; 0) {</span>
+<span class="nc" id="L27">			return true;</span>
+		}
+<span class="nc" id="L29">		return false;</span>
+	}
+	public Texture getSprite() {
+<span class="nc" id="L32">		return appearance;</span>
+	}
+	public void setDMG(int dmg) {
+<span class="nc" id="L35">		this.HP = HP - dmg;</span>
+<span class="nc" id="L36">	}</span>
+	public void setHP(int add) {
+<span class="nc" id="L38">		HP += add;</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">		if(HP &gt; 100) {</span>
+<span class="nc" id="L40">			HP = 100;</span>
+		}
+<span class="nc" id="L42">	}</span>
+	public int getHP() {
+<span class="nc bnc" id="L44" title="All 2 branches missed.">		if(this.HP &lt;0) {</span>
+<span class="nc" id="L45">			this.HP = 0;</span>
+		}
+<span class="nc" id="L47">		return this.HP;</span>
+	}
+	
+	public String getName() {
+<span class="nc" id="L51">		return name;</span>
+	}
+	
+	public int getDMG() {
+<span class="nc" id="L55">		return ATT;</span>
+	}
+	public int getSP() {
+<span class="nc" id="L58">		return SP_ATT;</span>
+	}
+	public int getSpeed() {
+<span class="nc" id="L61">		return SPEED;</span>
+	}
+	
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
