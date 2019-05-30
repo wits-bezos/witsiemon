@@ -1,6 +1,8 @@
 # witsiemon
 [![Build Status](https://travis-ci.org/wits-bezos/witsiemon.svg?branch=Mavis-test-Farhaan)](https://travis-ci.org/wits-bezos/witsiemon)
 
+[![Coverage Status](https://coveralls.io/repos/github/wits-bezos/witsiemon/badge.svg?branch=Mavis-test-Farhaan)](https://coveralls.io/github/wits-bezos/witsiemon?branch=Mavis-test-Farhaan)
+
 [![codecov](https://codecov.io/gh/wits-bezos/witsiemon/branch/Mavis-test-Farhaan/graph/badge.svg)](https://codecov.io/gh/wits-bezos/witsiemon)
 
 

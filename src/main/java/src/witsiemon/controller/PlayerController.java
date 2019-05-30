@@ -12,7 +12,7 @@ import src.witsiemon.screen.battleScreen;
 public class PlayerController extends InputAdapter{
 	
 	private Actor player;
-	private boolean up, down, left, right, newScreen;
+	public boolean up, down, left, right, newScreen;
 	
 	public PlayerController(Actor p) {
 		this.player = p;
