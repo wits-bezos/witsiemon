@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Witsiemon.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">witsiemon</a> &gt; <a href="index.source.html" class="el_package">src.witsiemon</a> &gt; <span class="el_source">Witsiemon.java</span></div><h1>Witsiemon.java</h1><pre class="source lang-java linenums">package src.witsiemon;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+
+import src.witsiemon.model.Pokemon;
+import src.witsiemon.screen.GameScreen;
+import src.witsiemon.screen.battleScreen;
+
+public class Witsiemon extends Game {
+	
+	private GameScreen screen;
+	private AssetManager assetManager;
+	private battleScreen battleScreen;
+	private Pokemon user;
+	private Pokemon enemy;
+	public boolean battle;
+	
+<span class="nc" id="L22">	public Witsiemon(boolean battle){</span>
+<span class="nc" id="L23">		this.battle = battle;</span>
+<span class="nc" id="L24">	}</span>
+	@Override
+	public void create() {
+<span class="nc" id="L27">		assetManager = new AssetManager();</span>
+<span class="nc" id="L28">		assetManager.load(&quot;res/packed/textures.atlas&quot;, TextureAtlas.class);</span>
+<span class="nc" id="L29">		assetManager.finishLoading();</span>
+		
+<span class="nc" id="L31">		user = new Pokemon(&quot;charizard&quot;,100,20,30,6);</span>
+<span class="nc" id="L32">		enemy = new Pokemon(&quot;ekans&quot;,100,15,2,1);</span>
+<span class="nc" id="L33">		battleScreen = new battleScreen(this, enemy, user);</span>
+<span class="nc" id="L34">		screen = new GameScreen(this);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(battle) {</span>
+<span class="nc" id="L36">			this.setScreen(battleScreen);</span>
+	
+		}
+		else {
+<span class="nc" id="L40">			this.setScreen(screen);</span>
+		}
+<span class="nc" id="L42">	}</span>
+	
+	@Override
+	public void render() {
+<span class="nc" id="L46">		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);</span>
+<span class="nc" id="L47">		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);</span>
+		
+<span class="nc" id="L49">		super.render();</span>
+<span class="nc" id="L50">	}</span>
+	
+	public AssetManager getAssetManager() {
+<span class="nc" id="L53">		return assetManager;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

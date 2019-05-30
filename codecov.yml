@@ -1,0 +1,10 @@
+ignore:
+  - "src/main/java/src/witsiemon/screen/abstractScreen.java"  
+  - "src/main/java/src/witsiemon/util"
+  - "src/main/java/src/witsiemon/Main.java"  
+  - "src/main/java/src/witsiemon/Settings.java"
+  - "src/main/java/src/witsiemon/model/World.java"
+  - "src/main/java/src/witsiemon/screen"
+  - "src/main/java/src/witsiemon/model/Actor.java"
+
+
