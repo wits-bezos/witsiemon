@@ -11,7 +11,7 @@ import src.witsiemon.model.TileMap;
 
 public class TileTest {
 	
-	// test case to validate correct terrain structure 
+	
 	@Test
 	public void getTerrain_anystate_grass() {
 		
@@ -26,7 +26,7 @@ public class TileTest {
 		assertEquals(result, terrain);
 	}
 	
-	// test case to validate correct terrain structure  
+	  
 	@Test
 	public void getActor_anystate_actor() {
 		

@@ -15,7 +15,7 @@ import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 
 public class ActorTest {
 	
-	// test case to validate correct change in direction 
+	
 	@Test
 	public void getX_return_five() {
 		
@@ -31,7 +31,7 @@ public class ActorTest {
 		assertEquals(result, 5);
 	}
 	
-	// test case to validate correct change in direction 
+
 	@Test
 	public void getY_return_five() {
 		
@@ -47,7 +47,7 @@ public class ActorTest {
 		assertEquals(result, 5);
 	}
 	
-	// test case to validate correct change in direction 
+	
 	@Test
 	public void getWorldY_return_float() {
 		
@@ -63,7 +63,7 @@ public class ActorTest {
 		assert(result == 5);
 	}
 	
-	// test case to validate correct change in direction 
+	
 	@Test
 	public void getWorldX_return_float() {
 		
@@ -79,7 +79,7 @@ public class ActorTest {
 		assert(result == 5);
 	}
 	
-	// test case to validate correct change in direction 
+	 
 	@Test
 	public void move_return_float() {
 		

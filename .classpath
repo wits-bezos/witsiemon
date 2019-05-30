@@ -32,6 +32,6 @@
 	<classpathentry kind="lib" path="lib/gdx-tools.jar"/>
 	<classpathentry kind="lib" path="lib/gdx.jar"/>
 	<classpathentry kind="lib" path="libGdx/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="libGdx/gdx-1.9.9.jar"/>
+	<classpathentry kind="lib" path="libGdx/gdx-1.9.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

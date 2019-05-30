@@ -8,7 +8,7 @@ import src.witsiemon.model.Camera;
 
 public class CameraTest {
 	
-	// test case to validate camera scale 
+	
 	@Test
 	public void getCameraX_scale_zero() {
 	
@@ -25,7 +25,7 @@ public class CameraTest {
 		assertTrue(cameraX == result);
 	}
 	
-	// test case to validate camera scale 
+	
 	@Test
 	public void getCameraY_scale_zero() {
 	

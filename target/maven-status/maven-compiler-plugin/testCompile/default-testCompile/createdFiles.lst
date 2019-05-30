@@ -1,0 +1,5 @@
+src\witsiemon\model\ActorTest.class
+src\witsiemon\model\TileTest.class
+src\witsiemon\controller\PlayerControllerTest.class
+src\witsiemon\model\CameraTest.class
+src\witsiemon\model\TileMapTest.class
