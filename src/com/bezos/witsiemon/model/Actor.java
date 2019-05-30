@@ -79,6 +79,9 @@ public class Actor {
 		if (map.getLayer(0).getTile(x+dir.getDx(), y+dir.getDy()).getActor() != null) {
 			return false;
 		}
+		if (map.getProperties(x+dir.getDx(), y+dir.getDy()) == PROPERTIES.BLOCKED) {
+			return false;
+		}
 		
 		initMove(dir);
 		

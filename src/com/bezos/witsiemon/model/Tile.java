@@ -36,5 +36,9 @@ public class Tile {
 
 	public void setActor(Actor actor) {
 		this.actor = actor;
-	} 
+	}
+	
+	public PROPERTIES getPropety() {
+		return property;
+	}
 }

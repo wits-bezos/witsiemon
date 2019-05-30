@@ -24,7 +24,13 @@ public class Layer {
 			for (int y = 0; y < height; y++) {
 				try {
 					texture = layer.getCell(x, y).getTile().getTextureRegion();
-					map[x][y] = new Tile(texture, PROPERTIES.COLLIDABLE);
+					Boolean blocked = layer.getCell(x, y).getTile().getProperties().containsKey("blocked");
+					if (blocked) {
+						map[x][y] = new Tile(texture, PROPERTIES.BLOCKED);
+					}
+					else {
+						map[x][y] = new Tile(texture, PROPERTIES.COLLIDABLE);
+					}
 				}
 				catch (Exception e){
 					texture = null;
